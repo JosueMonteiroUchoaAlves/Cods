@@ -1,18 +1,18 @@
-# instala minha imagem node
+# instala + define minha imagem node
 FROM node:14 
-# definir minha imagem base
-# react react dom 
-#npm para gerenciar as bibliotecas 
 
-# Copia o package.json e o package-lock.json que sao meus arquivos ppara meu conteiner
+# Copia o package.json
 COPY package.json .
 
 # Instala as dependências
+# Instala o gerenciador de dependências "yarn" 
+# Junto vem todas as dependências necessárias para meu projeto rodar
 RUN yarn install
 
-# Copia os arquivos do projeto
+# Copia os arquivos do projeto para dentro de meu conteiner
 COPY . .
 
+#Expõe a porta na qual minha aplicação será apresentada
 EXPOSE 3000
 
 # Inicia o servidor dá o comando inicial
