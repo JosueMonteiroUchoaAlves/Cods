@@ -1,0 +1,20 @@
+#Definindo minha versão do Docker
+version: "3.8"
+
+# Digo quais serão meus serviços/conteineres
+services:
+  # É um nome que eu dei para meu primeiro conteiner
+  frontend:
+    # É onde está localizado meu conteiner (como no build: docker build -t a .)
+    build: \counter\
+    # O comando inicial para quando a aplicação iniciar
+    command: yarn start
+    # A porta que vai hospedar:
+    ports:
+     - "3000:3000"
+  fastapi:
+    build: \python
+    # 
+    command: uvicorn App:app --host 0.0.0.0 --port 80
+    ports: 
+      - "80:80"

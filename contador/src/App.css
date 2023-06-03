@@ -1,0 +1,13 @@
+body {
+  background-color: #444;
+  color:#fff;
+  text-align:center;
+  font-family:sans-serif;
+}
+
+.estilo-botoes{
+  background-color: #444;
+  color: #fff;
+  border-radius: 10px;
+}
+
