@@ -2,23 +2,24 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-# Aponta que a função logo abaixo dela será executada quando houver uma requisição
+#Indicates that the function right below it will be executed when there is a request
 @app.get("/")
 def hello_world():
     return {"Hello": "World"}
-#Quando quiser somar
-@app.get("/soma")
-def soma(var1: int, var2: int):
-    return {"Soma":var1+var2} 
 
-@app.get("/subtracao")
-def subtracao(var1:int, var2:int):
-    return {"Diferença": var1-var2}
+#When you want to...
+@app.get("/sum")
+def sum(var1: int, var2: int):
+    return {"Sum": var1 + var2}
 
-@app.get("/divisao")
-def divisao(var1:int,var2:int):
-    return {"Quociente":var1/var2}
+@app.get("/subtraction")
+def subtraction(var1: int, var2: int):
+    return {"Difference": var1 - var2}
 
-@app.get("/multiplicacao")
-def multiplicacao(var1:int, var2: int):
-    return {"Produto":var1*var2}
+@app.get("/division")
+def division(var1: int, var2: int):
+    return {"Quotient": var1 / var2}
+
+@app.get("/multiplication")
+def multiplication(var1: int, var2: int):
+    return {"Product": var1 * var2}

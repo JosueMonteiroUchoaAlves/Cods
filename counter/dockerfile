@@ -1,19 +1,19 @@
-# instala + define minha imagem node
-FROM node:16 
+#Install and define my Node.js image
+FROM node:16
 
-# Copia o package.json
+#Copy the package.json
 COPY package.json .
 
-# Instala as dependências
-# Instala o gerenciador de dependências "yarn" 
-# Junto vem todas as dependências necessárias para meu projeto rodar
+#Install dependencies
+#Install the package manager "yarn"
+#Along with it, all the necessary dependencies for my project to run
 RUN yarn install
 
-# Copia os arquivos do projeto para dentro de meu conteiner
+#Copy project files into the container
 COPY . .
 
-#Expõe a porta na qual minha aplicação será apresentada
+#Expose the port on which my application will be served
 EXPOSE 3000
 
-# Inicia o servidor dá o comando inicial
+#Start the server with the initial command
 CMD ["yarn", "start"]

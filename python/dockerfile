@@ -1,14 +1,14 @@
-# instala + define minha imagem node
+#Install + Define my Node image
 FROM python:3.9
 
-# Instala as dependências
-# Junto vem todas as dependências necessárias para meu projeto rodar
+#Install dependencies
+#Along with it, all the necessary dependencies for my project to run are installed
 COPY /requirements.txt .
 
 RUN pip install -r requirements.txt
 
-# Copia os arquivos do projeto para dentro de meu conteiner
+#Copy project files into my container
 COPY . .
 
-# Inicia o servidor dá o comando inicial
+#Start the server with the initial command
 CMD ["uvicorn", "App:app", "--host", "0.0.0.0", "--port", "80"]

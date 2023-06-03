@@ -1,12 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Botoes from './App.js';
+import ReactDOM from 'react-dom';
+import Buttons from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-  <html>
-    <Botoes /> 
-  </html>
+ReactDOM.render(
+  <React.StrictMode>
+    <Buttons />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
+
+
+
+
+
 
