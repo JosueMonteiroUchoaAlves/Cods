@@ -29,5 +29,25 @@ Run the DockerCompose
 
 ## Using the API (with curl)
 
-# ERROR 404 NOT FOUND
+Hello World:
+```bash
+  curl localhost:8000
+```
+
+To sum:
+```bash
+  curl -i localhost:8000/sum?var1=1^&var2=2
+```
+subtract:
+```bash
+  curl -i localhost:8000/subtraction?var1=5^&var2=3
+```
+multiply:
+```bash
+  curl -i localhost:8000/multiplication?var1=7^&var2=4
+```
+divide:
+```bash
+  curl -i localhost:8000/division?var1=8^&var2=2
+```
 
