@@ -11,10 +11,12 @@ services:
     command: yarn start
     # Port to be exposed
     ports:
-    - "3000:3000"
+      - "3000:3000"
   fastapi:
     build: ./python
     # Initial command for the container
-    command: uvicorn App:app --host 0.0.0.0 --port 80
+    command: uvicorn App:app --reload --host 0.0.0.0 --port 8000
     ports:
-    - "80:80"
+      - "8000:8000"
+    volumes:
+      - ./python/App:/app

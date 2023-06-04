@@ -1,6 +1,5 @@
 #Install + Define my Node image
 FROM python:3.9
-
 #Install dependencies
 #Along with it, all the necessary dependencies for my project to run are installed
 COPY /requirements.txt .
@@ -11,4 +10,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 #Start the server with the initial command
-CMD ["uvicorn", "App:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "App:app", "--host", "0.0.0.0", "--port", "8000"]
