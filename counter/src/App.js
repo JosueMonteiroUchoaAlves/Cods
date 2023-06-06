@@ -16,12 +16,10 @@ function Buttons(){
     return(
         <div>
             <h1>Counter</h1>
-            <button className="button-style" onClick={clickPlus}>+</button>
             <h6>{counter}</h6>
-            <button className="button-style" onClick={clickMinus}>-</button>    
-            <br/>
-            <br/>
+            <button className="button-style" onClick={clickPlus}>+</button>
             <button className="button-style" onClick={reset}>RESET</button>
+            <button className="button-style" onClick={clickMinus}>-</button>    
         </div>
     )
 }
