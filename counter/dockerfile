@@ -7,8 +7,8 @@ COPY package.json .
 #Install dependencies
 #Install the package manager "yarn"
 #Along with it, all the necessary dependencies for my project to run
-RUN yarn install
-
+RUN yarn install 
+RUN yarn add axios
 #Copy project files into the container
 COPY . .
 
